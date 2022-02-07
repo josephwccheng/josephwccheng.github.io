@@ -1,0 +1,17 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-nav li {
+    padding: 0px 30px;
+}
+
+.content {
+    padding-top:100px;
+}
