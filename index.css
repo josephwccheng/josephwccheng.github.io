@@ -1,17 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Staatliches&display=swap');
+
+body {
+    font-family: 'Karla', sans-serif;
+}
+
+h1 {
+    font-family: 'Staatliches', 'Arial', sans-serif;
+    letter-spacing: 3px;
+}
+
 .navbar {
     position: fixed;
     top: 0;
-    width: 100%
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.navbar-brand {
+    font-family: 'Staatliches', 'Arial', sans-serif;
+    letter-spacing: 2px;
+}
+
+.navbar-brand img {
+    margin-left: 15px;
+}
+
+.navbar-brand .col-md-4 {
+    float: right;
+    margin-top: 5px;
+    margin-left: -80px;
 }
 
 .navbar-nav {
     margin-left: auto;
+    text-align: right;
 }
 
 .navbar-nav li {
     padding: 0px 30px;
 }
 
-.content {
-    padding-top:100px;
+
+/*---------- Hover Effects ----------*/
+nav ul {
+    list-style: none;
+    text-align: center;
 }
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #aaa;
+    font-weight: 800;
+    margin: 0 10px;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+    transition: all 0.3s;
+}
+
+nav ul li a:hover {
+    color: #555;
+}
+
+/* underline */
+nav.stroke ul li a,
+nav.fill ul li a {
+    position: relative;
+}
+
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: rgb(80, 66, 66);
+    height: 3px;
+    border-radius: 5px;
+}
+
+nav.stroke ul li a:hover:after {
+    width: 100%;
+}
+
+
+
+
+.content {
+    margin-top: auto;
+}
+
+/* Offset for navigation links */
+.anchor::before {
+    content: '';
+    display: block;
+    height:      75px;
+    margin-top: -45px;
+    visibility: hidden;
+  }
