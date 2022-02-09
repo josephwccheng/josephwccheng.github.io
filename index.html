@@ -9,15 +9,18 @@
   <link href="css/index.css" rel="stylesheet">
 
 
+
+
 </head>
 
 <body>
   <div class="container-fluid p-0">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light stroke">
+    <nav class="navbar navbar-expand-lg navbar-light stroke">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img src="images/logo.svg" alt="" width="100" height="30">
-          <div class="col-md-4">HAWK SOLUTIONS</div></a>
+          <div class="col-md-4">HAWK SOLUTIONS</div>
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -42,19 +45,19 @@
     </nav>
 
     <div class="content">
-      <div class="container-fluid p-5 bg-primary text-white anchor" id="home">
+      <div class="container-fluid p-5 anchor" id="home">
         <h1>HAWK SOLUTIONS</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
           et
           dolore magna aliqua.</p>
       </div>
 
-      <div class="container-fluid p-5 bg-primary text-white anchor" id="aboutus">
+      <div class="container-fluid p-5 anchor" id="aboutus">
         <h1>About Us</h1>
         <p>about us</p>
       </div>
 
-      <div class="container-fluid p-5 bg-primary text-white anchor" id="services">
+      <div class="container-fluid p-5 anchor" id="services">
         <h1>Services</h1>
         <p>
           <li>Lighting</li>
@@ -64,6 +67,7 @@
           <li>General Electronics</li>
         </p>
         <div class="row" id="gallery">
+          <h2>Past Projects</h2>
           <div class="col-12 col-sm-6 col-lg-4">
             <img class="w-100" src="images/Bricklane bar/IMG_1600.JPG">
           </div>
@@ -83,11 +87,11 @@
             <img class="w-100" src="images/wiring/IMG_3999.JPG">
           </div>
         </div>
-        
+
       </div>
 
 
-      <div class="container-fluid p-5 bg-primary text-white anchor" id="contactus">
+      <div class="container-fluid p-5 anchor" id="contactus">
         <h1>Contact Us</h1>
         <p>Phone: 0111111111</p>
         <p>Email: test@gmail.com</p>
@@ -99,12 +103,26 @@
     </div>
 
   </div>
-  <footer class="footer mt-auto py-3 bg-light text-center">
+  <footer class="footer mt-auto py-3 text-center">
     <div class="container">
       <span class="text-muted">Hawk Solutions™</span>
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- collapse navbar button when link is clicked -->
+  <script>
+    const navLinks = document.querySelectorAll('.nav-item')
+    const menuToggle = document.getElementById('navbarSupportedContent')
+    const bsCollapse = new bootstrap.Collapse(menuToggle, {
+      toggle: false
+    })
+    navLinks.forEach((l) => {
+      l.addEventListener('click', () => {
+        bsCollapse.toggle()
+      })
+    })
+  </script>
 </body>
 
 </html>

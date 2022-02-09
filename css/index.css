@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla&family=Staatliches&display=swap');
+:root {
+    --headerbg: #5e5e5e;
+    --headertext: #ffffffcb;
+    --headertexthover: rgba(0,0,0,0.8);
+    --footer: #dbdbdb;
+}
 
 body {
     font-family: 'Karla', sans-serif;
+    background-color: #F9FAF4;
+    color:rgba(0,0,0,.6);
 }
 
 h1 {
@@ -9,11 +17,21 @@ h1 {
     letter-spacing: 3px;
 }
 
+h2 {
+    font-family: 'Staatliches', 'Arial', sans-serif;
+    letter-spacing: 3px;
+    font-size: x-large;
+}
+
+/*-------------------- Header ---------------------*/
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
     text-transform: uppercase;
+    background-color: var(--headerbg);
+    --bs-bg-opacity: 1;
+    box-shadow: 5px 5px 5px #88888844;
 }
 
 .navbar-brand {
@@ -28,7 +46,24 @@ h1 {
 .navbar-brand .col-md-4 {
     float: right;
     margin-top: 5px;
-    margin-left: -80px;
+    width: 150px;
+    color: var(--headertext);
+    transition: all 0.3s;
+}
+
+@media screen and (max-width:340px) {
+    .navbar-brand .col-md-4 {
+        font-size: 1rem;
+    }
+    .navbar-brand img {
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .navbar-brand .col-md-4 {
+        width: 120px;
+    }
 }
 
 .navbar-nav {
@@ -39,6 +74,12 @@ h1 {
 .navbar-nav li {
     padding: 0px 30px;
 }
+
+.navbar-light .navbar-nav .nav-link {
+    color:var(--headertext);
+}
+
+
 
 
 /*---------- Hover Effects ----------*/
@@ -70,10 +111,16 @@ nav ul li a:hover {
     color: #555;
 }
 
+.navbar-brand .col-md-4:hover {
+    color: var(--headertexthover);
+    transition: all 0.3s;
+}
+
 /* underline */
 nav.stroke ul li a,
 nav.fill ul li a {
     position: relative;
+    float:right;
 }
 
 nav.stroke ul li a:after,
@@ -86,7 +133,7 @@ nav.fill ul li a:after {
     width: 0%;
     content: '.';
     color: transparent;
-    background: rgb(80, 66, 66);
+    background: #ffc94b;
     height: 3px;
     border-radius: 5px;
 }
@@ -95,6 +142,7 @@ nav.stroke ul li a:hover:after {
     width: 100%;
 }
 
+/*---------- End Hover Effects ----------*/
 
 
 
@@ -109,4 +157,9 @@ nav.stroke ul li a:hover:after {
     height:      75px;
     margin-top: -45px;
     visibility: hidden;
+  }
+
+
+  .footer {
+    background-color: var(--footer);
   }
