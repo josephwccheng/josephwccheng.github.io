@@ -219,6 +219,10 @@ video {
     margin-bottom: 10px;
 }
 
+.gallery p {
+    text-align: center;
+}
+
 .footer {
     background-color: var(--footer);
 }
