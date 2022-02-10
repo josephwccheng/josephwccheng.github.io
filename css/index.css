@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla&family=Staatliches&display=swap');
 
 :root {
-    --headerbg: #5e5e5e;
+    --headerbg: #929292;
     --headertext: #ffffffe7;
     --headertexthover: rgba(0, 0, 0, 0.8);
     --footer: #dbdbdb;
@@ -22,6 +22,12 @@ h2 {
     font-family: 'Staatliches', 'Arial', sans-serif;
     letter-spacing: 3px;
     font-size: x-large;
+}
+
+h3 {
+    font-family: 'Staatliches', 'Arial', sans-serif;
+    letter-spacing: 3px;
+    font-size: large;
 }
 
 /*-------------------- Header ---------------------*/
@@ -157,10 +163,12 @@ nav.stroke ul li a:hover:after {
 
 /*---------- End Hover Effects ----------*/
 
-
-
 .content {
     margin-top: auto;
+}
+
+.content .container-fluid:not(#home) {
+    margin-top: -90px;
 }
 
 /* Offset for navigation links */
@@ -172,10 +180,46 @@ nav.stroke ul li a:hover:after {
     visibility: hidden;
 }
 
+.hero {
+    margin-top: 20px;
+    padding-top: 60px;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("../images/hero.jpg"); */
+    background-color: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5));
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#home {
+    padding: 2rem 5rem 8rem 5rem;
+}
 .home-row {
-    background-color: blueviolet;
+    text-align: center;
+    left: 50%;
+    color: white;
+}
+
+video {
+    margin-top:-20px;
+    width: 100vw;
+    height: 300px;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(60%);
+}
+
+@media screen and (max-width:398px) {
+    video {
+        height: 400px;
+    }
+}
+
+.gallery {
+    margin-bottom: 10px;
 }
 
 .footer {
     background-color: var(--footer);
 }
+
