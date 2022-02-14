@@ -231,3 +231,7 @@ video {
     background-color: var(--footer);
 }
 
+/* contact us */
+#contactus h3 {
+    float:left;
+}
