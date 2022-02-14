@@ -223,6 +223,10 @@ video {
     text-align: center;
 }
 
+.portraits {
+    justify-content: center;
+}
+
 .footer {
     background-color: var(--footer);
 }
