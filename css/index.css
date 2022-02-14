@@ -132,11 +132,11 @@ nav ul li a:before {
     transition: all 0.3s;
 }
 
-.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
-    color: var(--headertexthover);
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover, .nav-link.hovered {
+    color: var(--headertexthover)!important;
 }
 
-.navbar-brand .col-md-4:hover {
+.navbar-brand .col-md-4:hover, .col-md-4.hovered {
     color: var(--headertexthover);
     transition: all 0.3s;
 }
@@ -236,11 +236,15 @@ video {
 .footer {
     background-color: var(--footer);
     position: absolute;
-    bottom: -60px;
+    bottom: 0px;
     width: 100%;
 }
 
 /* contact us */
 #contactus h3 {
     float:left;
+}
+
+.map {
+    margin-bottom: 60px;
 }
