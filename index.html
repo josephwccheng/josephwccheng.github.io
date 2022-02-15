@@ -12,11 +12,12 @@
 
 <body>
   <div class="container-fluid p-0">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light stroke">
+    <nav class="navbar navbar-expand-lg navbar-dark stroke">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img src="images/logo.svg" alt="" width="100" height="30">
-          <div class="col-md-4">HAWK SOLUTIONS</div></a>
+          <div class="col-md-4">HAWK SOLUTIONS</div>
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -24,16 +25,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#home">Home</a>
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#aboutus">About Us</a>
+              <a class="nav-link" href="aboutus.html">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#services">Services</a>
+              <a class="nav-link" href="services.html">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contactus">Contact Us</a>
+              <a class="nav-link" href="contactus.html">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -41,68 +42,52 @@
     </nav>
 
     <div class="content">
-      <div class="container-fluid p-5 bg-primary text-white anchor" id="home">
-        <h1>HAWK SOLUTIONS</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-          et
-          dolore magna aliqua.</p>
-      </div>
-
-      <div class="container-fluid p-5 bg-primary text-white anchor" id="aboutus">
-        <h1>About Us</h1>
-        <p>about us</p>
-      </div>
-
-      <div class="container-fluid p-5 bg-primary text-white anchor" id="services">
-        <h1>Services</h1>
-        <p>
-          <li>Lighting</li>
-          <li>Network and Wiring</li>
-          <li>IOT Devices</li>
-          <li>Industrial</li>
-          <li>General Electronics</li>
-        </p>
-        <div class="row" id="gallery">
-          <div class="col-12 col-sm-6 col-lg-4">
-            <img class="w-100" src="images/Bricklane bar/IMG_1600.JPG">
-          </div>
-          <div class="col-12 col-sm-6 col-lg-4">
-            <img class="w-100" src="images/flow gym/IMG_5397.JPG">
-          </div>
-          <div class="col-12 col-sm-6 col-lg-4">
-            <img class="w-100" src="images/ivory room/IMG_9750.JPG">
-          </div>
-          <div class="col-12 col-sm-6 col-lg-4">
-            <img class="w-100" src="images/residential/EHDT6362.JPG">
-          </div>
-          <div class="col-12 col-sm-6 col-lg-4">
-            <img class="w-100" src="images/sea deck/IMG_0014.JPG">
-          </div>
-          <div class="col-12 col-sm-6 col-lg-4">
-            <img class="w-100" src="images/wiring/IMG_3999.JPG">
-          </div>
+      <div class="hero">
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+          <source src="images/hero.MOV" type="video/mp4">
+        </video>
+      <div class="container-fluid anchor" id="home">
+        <div class="row home-row">
+          <h1>HAWK SOLUTIONS</h1>  
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            et
+            dolore magna aliqua.</p>
         </div>
-        
+      </div>
       </div>
 
-
+      <div class="container-fluid p-5 anchor">
+      </div>
       <div class="container-fluid p-5 bg-primary text-white anchor" id="contactus">
         <h1>Contact Us</h1>
         <p>Phone: +61 401 085 252</p>
         <p>Email: anthonyjhawkins@bigpond.com</p>
         <p>Addres: 15 Belvoir St Surry Hills NSW 2010</p>
       </div>
-
-
-
     </div>
-
   </div>
-  <footer class="footer mt-auto py-3 bg-light text-center">
+
+  <footer class="footer mt-auto py-3 text-center">
     <div class="container">
       <span class="text-muted">HAWKES SOLUTIONS SYDNEY PTY LTD © 2022</span>
     </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- collapse navbar button when link is clicked -->
+  <script>
+    const navLinks = document.querySelectorAll('.nav-item')
+    const menuToggle = document.getElementById('navbarSupportedContent')
+    const bsCollapse = new bootstrap.Collapse(menuToggle, {
+      toggle: false
+    })
+    navLinks.forEach((l) => {
+      l.addEventListener('click', () => {
+        bsCollapse.toggle()
+      })
+    })
+  </script>
 </body>
 
 </html>
