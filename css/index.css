@@ -49,6 +49,7 @@ a {
     background-color: var(--headerbg);
     --bs-bg-opacity: 1;
     box-shadow: 5px 5px 5px #88888844;
+    z-index: 2;
 }
 
 .navbar-brand {
@@ -232,6 +233,56 @@ video {
     color: white;
 }
 
+.services {
+    margin-left:45%;
+    background-color: var(--headerbg);
+    transition: all 0.3s;
+    border: none;
+    border-radius: 5px;
+    color: var(--headertext);
+}
+
+.services:hover {
+    background-color: #ffc94b;
+    transition: all 0.3s;
+    color: var(--headertexthover);
+  }
+  
+  .services:active {
+    box-shadow: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    transition: all 0.3s;
+    color: var(--headertexthover);
+    background-color: #dfab32;
+}
+  
+  @media (min-width: 768px) {
+    .services {
+      padding: .75rem 1.5rem;
+    }
+  }
+
+/* Carousel */
+.carousel-inner {
+    width:50%;
+    margin-left:25%;
+    z-index: -1;
+}
+.carousel-control-next {
+    right: 20%;
+}
+.carousel-control-prev {
+    left: 20%;
+}
+
+.carousel-indicators {
+    margin-right: 15%;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.562);
+}
 
 /*------------------ Services and About Us images and captions ------------------*/
 .gallery {
