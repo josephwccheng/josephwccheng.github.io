@@ -1,5 +1,7 @@
+// this function runs when the DOM is ready, i.e. when the document has been parsed
 document.addEventListener("DOMContentLoaded", function() {
-  // this function runs when the DOM is ready, i.e. when the document has been parsed
+  // (TODO) - These functions are currently unnecessary for the navigation bar, this might be different later on
+
   // const navLinks = document.querySelectorAll('.nav-item')
   // const menuToggle = document.getElementById('navbarSupportedContent')
   // const bsCollapse = new bootstrap.Collapse(menuToggle, {
