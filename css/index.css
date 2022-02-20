@@ -311,7 +311,7 @@ video {
 /*------------------ Footer ------------------*/
 .footer {
     background-color: var(--footer);
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     width: 100%;
 }
