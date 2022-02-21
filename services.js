@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const projectConsultationsBtn = document.getElementById("project-consultations-btn");
 
     commercialBtn.onclick = function () {
-        console.log(commercialDiv.style.display)
         if (commercialDiv.style.display !== "block") {
             commercialDiv.style.display = "block";
         } else {
@@ -23,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     wiringBtn.onclick = function () {
-        console.log(wiringDiv.style.display)
         if (wiringDiv.style.display !== "block") {
             wiringDiv.style.display = "block";
         } else {
@@ -32,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     dataAndCommsBtn.onclick = function () {
-        console.log(dataAndCommsDiv.style.display)
         if (dataAndCommsDiv.style.display !== "block") {
             dataAndCommsDiv.style.display = "block";
         } else {
@@ -41,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     industrialBtn.onclick = function () {
-        console.log(industrialDiv.style.display)
         if (industrialDiv.style.display !== "block") {
             industrialDiv.style.display = "block";
         } else {
@@ -50,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     greenEnergyBtn.onclick = function () {
-        console.log(greenEnergyDiv.style.display)
         if (greenEnergyDiv.style.display !== "block") {
             greenEnergyDiv.style.display = "block";
         } else {
@@ -59,7 +54,6 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     projectConsultationsBtn.onclick = function () {
-        console.log(projectConsultationsDiv.style.display)
         if (projectConsultationsDiv.style.display !== "block") {
             projectConsultationsDiv.style.display = "block";
         } else {
