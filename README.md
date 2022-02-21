@@ -1,5 +1,5 @@
 # Project: Static Webpage - Hawk Solutions
-**About This Project:** This is a static built for Hawk Solutions, designed for an Electrician company to showcase services and projects. This website should be compatible from both web and mobile view using the bootstrap framework.
+**About This Project:** This is a static built for Hawk Solutions, designed for an Electrical company to showcase services and projects. This website should be compatible from both web and mobile view using the bootstrap framework.
 
 **Author:** Evelyn Yew, Joseph Cheng
 
