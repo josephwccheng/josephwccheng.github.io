@@ -211,7 +211,7 @@ nav.stroke ul li a:hover:after {
 }
 
 .content .container-fluid:not(#home) {
-    margin-top: -90px;
+    margin-top: -40px;
 }
 
 /*------------------ Hero Image/Video------------------*/
@@ -229,7 +229,7 @@ nav.stroke ul li a:hover:after {
 video {
     margin-top: -20px;
     width: 100vw;
-    height: 300px;
+    height: 250px;
     object-fit: cover;
     position: absolute;
     z-index: -1;
@@ -340,7 +340,7 @@ video {
 /*------------------ Footer ------------------*/
 .footer {
     background-color: var(--footer);
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     width: 100%;
     margin-bottom:-5px;
