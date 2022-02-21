@@ -40,6 +40,9 @@ a {
     text-decoration: none;
 }
 
+.container-fluid {
+    float: left;
+}
 /*-------------------- Header ---------------------*/
 .navbar {
     position: fixed;
@@ -50,24 +53,40 @@ a {
     --bs-bg-opacity: 1;
     box-shadow: 5px 5px 5px #88888844;
     z-index: 2;
+    display: inline;
 }
 
 .navbar-brand {
     font-family: 'Staatliches', 'Arial', sans-serif;
     letter-spacing: 2px;
+    padding: 0;
 }
 
 .navbar-brand img {
     margin-left: 15px;
 }
 
-.navbar-brand .col-md-4 {
+.logo-white {
+    display: none;
+    position: absolute;
+    left: 12px;
+    z-index: 99;
+}
+
+.navbar-brand:hover .logo-white {
+    display: inline;
+}
+
+
+/* [DEPRECATED] Hawk Solution Logo Text */
+/* .navbar-brand .col-md-4 {
     float: right;
     margin-top: 5px;
     width: 150px;
     color: var(--headertext);
     transition: all 0.3s;
-}
+} */
+
 
 @media screen and (max-width:340px) {
     .navbar-brand .col-md-4 {
@@ -234,21 +253,22 @@ video {
 }
 
 .services {
-    margin-left:45%;
+    margin-left: 45%;
     background-color: var(--headerbg);
     transition: all 0.3s;
     border: none;
     border-radius: 5px;
     color: var(--headertext);
+    padding: .75rem 1.5rem;
 }
 
 .services:hover {
     background-color: #ffc94b;
     transition: all 0.3s;
     color: var(--headertexthover);
-  }
-  
-  .services:active {
+}
+
+.services:active {
     box-shadow: none;
     outline: 2px solid transparent;
     outline-offset: 2px;
@@ -256,32 +276,18 @@ video {
     color: var(--headertexthover);
     background-color: #dfab32;
 }
-  
-  @media (min-width: 768px) {
+
+
+@media (max-width: 768px) {
     .services {
-      padding: .75rem 1.5rem;
+        margin-left:35%;
     }
-  }
-
-/* Carousel */
-.carousel-inner {
-    width:50%;
-    margin-left:25%;
-    z-index: -1;
-}
-.carousel-control-next {
-    right: 20%;
-}
-.carousel-control-prev {
-    left: 20%;
 }
 
-.carousel-indicators {
-    margin-right: 15%;
-}
-
-.carousel-caption {
-    background-color: rgba(0, 0, 0, 0.562);
+@media (max-width: 418px) {
+    .services {
+        margin-left:19%;
+    }
 }
 
 /*------------------ Services and About Us images and captions ------------------*/
@@ -293,6 +299,29 @@ video {
     text-align: center;
 }
 
+#commercial-fitouts{
+    display: none;
+}
+
+#wiring{
+    display: none;
+}
+
+#industrial{
+    display: none;
+}
+
+#data-and-comms{
+    display: none;
+}
+
+#project-consultations{
+    display: none;
+}
+
+#green-energy{
+    display: none;
+}
 
 /*------------------ About Us ------------------*/
 .portraits {
@@ -314,6 +343,7 @@ video {
     position: absolute;
     bottom: 0px;
     width: 100%;
+    margin-bottom:-5px;
 }
 
 .bi {
@@ -327,7 +357,7 @@ video {
 
 @media screen and (max-width:418px) {
     .footer {
-        font-size: 0.7em; 
+        font-size: 0.7em;
     }
 }
 
@@ -339,4 +369,5 @@ svg:hover {
     color: var(--headertexthover);
     transition: all 0.3s;
 }
+
 /*------------------ End Footer ------------------*/
