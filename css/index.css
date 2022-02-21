@@ -19,21 +19,21 @@ body {
     color: rgba(0, 0, 0, .6);
 }
 
-h1 {
+h1, h2, h3, h4 {
     font-family: 'Staatliches', 'Arial', sans-serif;
     letter-spacing: 3px;
 }
 
 h2 {
-    font-family: 'Staatliches', 'Arial', sans-serif;
-    letter-spacing: 3px;
     font-size: x-large;
 }
 
 h3 {
-    font-family: 'Staatliches', 'Arial', sans-serif;
-    letter-spacing: 3px;
     font-size: large;
+}
+
+h4 {
+    font-size: medium;
 }
 
 a {
@@ -66,14 +66,14 @@ a {
     margin-left: 15px;
 }
 
-.logo-white {
+.logo-black {
     display: none;
     position: absolute;
     left: 12px;
     z-index: 99;
 }
 
-.navbar-brand:hover .logo-white {
+.navbar-brand:hover .logo-black {
     display: inline;
 }
 
@@ -119,6 +119,7 @@ a {
 
 .navbar-dark .navbar-toggler {
     border: none;
+    margin-right: 15px;
 }
 
 .navbar-dark .navbar-toggler-icon {
@@ -200,7 +201,7 @@ nav.stroke ul li a:hover:after {
     content: '';
     display: block;
     height: 75px;
-    margin-top: -25px;
+    margin-top: 15px;
     visibility: hidden;
 }
 
@@ -211,7 +212,7 @@ nav.stroke ul li a:hover:after {
 }
 
 .content .container-fluid:not(#home) {
-    margin-top: -40px;
+    margin-top: -20px;
 }
 
 /*------------------ Hero Image/Video------------------*/
@@ -229,7 +230,7 @@ nav.stroke ul li a:hover:after {
 video {
     margin-top: -20px;
     width: 100vw;
-    height: 250px;
+    height: 300px;
     object-fit: cover;
     position: absolute;
     z-index: -1;
@@ -243,7 +244,7 @@ video {
 }
 
 #home {
-    padding: 2rem 5rem 8rem 5rem;
+    padding: 5rem;
 }
 
 .home-row {
@@ -252,14 +253,24 @@ video {
     color: white;
 }
 
+/* -------------------------Past Projects------------------- */
+.gallery {
+    margin-bottom: 10px;
+}
+
+.gallery p, .gallery h4 {
+    text-align: center;
+}
+
+
+/*------------------ Services and About Us images and captions ------------------*/
 .services {
-    margin-left: 45%;
     background-color: var(--headerbg);
     transition: all 0.3s;
     border: none;
     border-radius: 5px;
     color: var(--headertext);
-    padding: .75rem 1.5rem;
+    padding: .75rem .75rem 0rem .75rem;
 }
 
 .services:hover {
@@ -275,28 +286,6 @@ video {
     transition: all 0.3s;
     color: var(--headertexthover);
     background-color: #dfab32;
-}
-
-
-@media (max-width: 768px) {
-    .services {
-        margin-left:35%;
-    }
-}
-
-@media (max-width: 418px) {
-    .services {
-        margin-left:19%;
-    }
-}
-
-/*------------------ Services and About Us images and captions ------------------*/
-.gallery {
-    margin-bottom: 10px;
-}
-
-.gallery p {
-    text-align: center;
 }
 
 #commercial-fitouts{
