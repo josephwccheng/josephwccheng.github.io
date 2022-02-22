@@ -19,7 +19,10 @@ body {
     color: rgba(0, 0, 0, .6);
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Staatliches', 'Arial', sans-serif;
     letter-spacing: 3px;
 }
@@ -43,6 +46,7 @@ a {
 .container-fluid {
     float: left;
 }
+
 /*-------------------- Header ---------------------*/
 .navbar {
     position: fixed;
@@ -258,13 +262,15 @@ video {
     margin-bottom: 10px;
 }
 
-.gallery p, .gallery h4 {
+.gallery p,
+.gallery h4 {
     text-align: center;
 }
 
 
 /*------------------ Services and About Us images and captions ------------------*/
 .services-btn {
+    width: 100%;
     background-color: var(--headerbg);
     transition: all 0.3s;
     border: none;
@@ -288,33 +294,30 @@ video {
     background-color: #dfab32;
 }
 
-#commercial-fitouts{
+@media (max-width: 1190px) and (min-width:768px) {
+    .services-btn {
+        height: 105px;
+    }
+}
+
+@media (max-width: 418px) {
+    .services-btn h2 {
+        font-size: large;
+    }
+}
+
+.services-list {
     display: none;
 }
 
-#wiring{
-    display: none;
-}
-
-#industrial{
-    display: none;
-}
-
-#data-and-comms{
-    display: none;
-}
-
-#project-consultations{
-    display: none;
-}
-
-#green-energy{
-    display: none;
+#services .row {
+    justify-content: center;
 }
 
 /*------------------ About Us ------------------*/
 .portraits {
     justify-content: center;
+    text-align: center;
 }
 
 /*------------------ Contact Us ------------------*/
@@ -332,7 +335,7 @@ video {
     position: fixed;
     bottom: 0px;
     width: 100%;
-    margin-bottom:-5px;
+    margin-bottom: -5px;
 }
 
 .bi {
