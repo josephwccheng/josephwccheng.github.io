@@ -300,7 +300,7 @@ video {
     }
 }
 
-@media (max-width: 418px) {
+@media (max-width: 768px) {
     .services-btn h2 {
         font-size: large;
     }
