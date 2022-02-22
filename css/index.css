@@ -19,25 +19,32 @@ body {
     color: rgba(0, 0, 0, .6);
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Staatliches', 'Arial', sans-serif;
     letter-spacing: 3px;
 }
 
 h2 {
-    font-family: 'Staatliches', 'Arial', sans-serif;
-    letter-spacing: 3px;
     font-size: x-large;
 }
 
 h3 {
-    font-family: 'Staatliches', 'Arial', sans-serif;
-    letter-spacing: 3px;
     font-size: large;
+}
+
+h4 {
+    font-size: medium;
 }
 
 a {
     text-decoration: none;
+}
+
+.container-fluid {
+    float: left;
 }
 
 /*-------------------- Header ---------------------*/
@@ -50,24 +57,40 @@ a {
     --bs-bg-opacity: 1;
     box-shadow: 5px 5px 5px #88888844;
     z-index: 2;
+    display: inline;
 }
 
 .navbar-brand {
     font-family: 'Staatliches', 'Arial', sans-serif;
     letter-spacing: 2px;
+    padding: 0;
 }
 
 .navbar-brand img {
     margin-left: 15px;
 }
 
-.navbar-brand .col-md-4 {
+.logo-black {
+    display: none;
+    position: absolute;
+    left: 12px;
+    z-index: 99;
+}
+
+.navbar-brand:hover .logo-black {
+    display: inline;
+}
+
+
+/* [DEPRECATED] Hawk Solution Logo Text */
+/* .navbar-brand .col-md-4 {
     float: right;
     margin-top: 5px;
     width: 150px;
     color: var(--headertext);
     transition: all 0.3s;
-}
+} */
+
 
 @media screen and (max-width:340px) {
     .navbar-brand .col-md-4 {
@@ -100,6 +123,7 @@ a {
 
 .navbar-dark .navbar-toggler {
     border: none;
+    margin-right: 15px;
 }
 
 .navbar-dark .navbar-toggler-icon {
@@ -181,7 +205,7 @@ nav.stroke ul li a:hover:after {
     content: '';
     display: block;
     height: 75px;
-    margin-top: -25px;
+    margin-top: 15px;
     visibility: hidden;
 }
 
@@ -192,7 +216,7 @@ nav.stroke ul li a:hover:after {
 }
 
 .content .container-fluid:not(#home) {
-    margin-top: -40px;
+    margin-top: -20px;
 }
 
 /*------------------ Hero Image/Video------------------*/
@@ -210,7 +234,7 @@ nav.stroke ul li a:hover:after {
 video {
     margin-top: -20px;
     width: 100vw;
-    height: 250px;
+    height: 300px;
     object-fit: cover;
     position: absolute;
     z-index: -1;
@@ -224,7 +248,7 @@ video {
 }
 
 #home {
-    padding: 2rem 5rem 8rem 5rem;
+    padding: 5rem;
 }
 
 .home-row {
@@ -233,22 +257,35 @@ video {
     color: white;
 }
 
-.services {
-    margin-left:45%;
+/* -------------------------Past Projects------------------- */
+.gallery {
+    margin-bottom: 10px;
+}
+
+.gallery p,
+.gallery h4 {
+    text-align: center;
+}
+
+
+/*------------------ Services and About Us images and captions ------------------*/
+.services-btn {
+    width: 100%;
     background-color: var(--headerbg);
     transition: all 0.3s;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
     color: var(--headertext);
+    padding: .75rem .75rem 0rem .75rem;
 }
 
-.services:hover {
+.services-btn:hover {
     background-color: #ffc94b;
     transition: all 0.3s;
     color: var(--headertexthover);
-  }
-  
-  .services:active {
+}
+
+.services-btn:active {
     box-shadow: none;
     outline: 2px solid transparent;
     outline-offset: 2px;
@@ -256,47 +293,31 @@ video {
     color: var(--headertexthover);
     background-color: #dfab32;
 }
-  
-  @media (min-width: 768px) {
-    .services {
-      padding: .75rem 1.5rem;
+
+@media (max-width: 1190px) and (min-width:768px) {
+    .services-btn {
+        height: 105px;
     }
-  }
-
-/* Carousel */
-.carousel-inner {
-    width:50%;
-    margin-left:25%;
-    z-index: -1;
-}
-.carousel-control-next {
-    right: 20%;
-}
-.carousel-control-prev {
-    left: 20%;
 }
 
-.carousel-indicators {
-    margin-right: 15%;
+@media (max-width: 768px) {
+    .services-btn h2 {
+        font-size: large;
+    }
 }
 
-.carousel-caption {
-    background-color: rgba(0, 0, 0, 0.562);
+.services-list {
+    display: none;
 }
 
-/*------------------ Services and About Us images and captions ------------------*/
-.gallery {
-    margin-bottom: 10px;
+#services .row {
+    justify-content: center;
 }
-
-.gallery p {
-    text-align: center;
-}
-
 
 /*------------------ About Us ------------------*/
 .portraits {
     justify-content: center;
+    text-align: center;
 }
 
 /*------------------ Contact Us ------------------*/
@@ -314,6 +335,7 @@ video {
     position: fixed;
     bottom: 0px;
     width: 100%;
+    margin-bottom: -5px;
 }
 
 .bi {
@@ -327,7 +349,7 @@ video {
 
 @media screen and (max-width:418px) {
     .footer {
-        font-size: 0.7em; 
+        font-size: 0.7em;
     }
 }
 
@@ -339,4 +361,5 @@ svg:hover {
     color: var(--headertexthover);
     transition: all 0.3s;
 }
+
 /*------------------ End Footer ------------------*/
