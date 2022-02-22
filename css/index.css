@@ -264,7 +264,7 @@ video {
 
 
 /*------------------ Services and About Us images and captions ------------------*/
-.services {
+.services-btn {
     background-color: var(--headerbg);
     transition: all 0.3s;
     border: none;
@@ -273,13 +273,13 @@ video {
     padding: .75rem .75rem 0rem .75rem;
 }
 
-.services:hover {
+.services-btn:hover {
     background-color: #ffc94b;
     transition: all 0.3s;
     color: var(--headertexthover);
 }
 
-.services:active {
+.services-btn:active {
     box-shadow: none;
     outline: 2px solid transparent;
     outline-offset: 2px;
