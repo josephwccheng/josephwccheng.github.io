@@ -3,10 +3,22 @@ $(document).ready(function () {
     var number;
     $('.project-highlights-img').click(function () {
         number = $('.project-highlights-img').index(this);
-        if ($('.project-highlights').eq(number).css("display") == 'none') {
+        // if on mobile show project highlights below each picture
+        if ($(window).width() < 576) {
             $('.project-highlights').hide();
-        }
-        $('.project-highlights').eq(number).slideToggle();
+            if ($('.project-highlights-mobile').eq(number).css("display") == 'none') {
+                $('.project-highlights-mobile').hide();
+            }
+            $('.project-highlights-mobile').eq(number).slideToggle();
+         }
+         else {
+            $('.project-highlights-mobile').hide();
+            if ($('.project-highlights').eq(number).css("display") == 'none') {
+                $('.project-highlights').hide();
+            }
+            $('.project-highlights').eq(number).slideToggle();
+         }
+        
     });
 
     // Show services text

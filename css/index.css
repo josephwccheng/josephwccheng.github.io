@@ -276,7 +276,7 @@ video {
     cursor: pointer;
 }
 
-.project-highlights {
+.project-highlights, .project-highlights-mobile {
     display: none;
 }
 
