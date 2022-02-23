@@ -257,7 +257,7 @@ video {
     color: white;
 }
 
-/* -------------------------Past Projects------------------- */
+/* -------------------------Project Highlights------------------- */
 .gallery {
     margin-bottom: 10px;
 }
@@ -267,6 +267,18 @@ video {
     text-align: center;
 }
 
+.gallery img {
+    transition: all 0.3s;
+}
+.gallery img:hover {
+    opacity: 0.7;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.project-highlights {
+    display: none;
+}
 
 /*------------------ Services and About Us images and captions ------------------*/
 .services-btn {
