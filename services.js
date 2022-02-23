@@ -10,15 +10,13 @@ $(document).ready(function () {
                 $('.project-highlights-mobile').hide();
             }
             $('.project-highlights-mobile').eq(number).slideToggle();
-         }
-         else {
+        } else {
             $('.project-highlights-mobile').hide();
             if ($('.project-highlights').eq(number).css("display") == 'none') {
                 $('.project-highlights').hide();
             }
             $('.project-highlights').eq(number).slideToggle();
-         }
-        
+        }
     });
 
     // Show services text

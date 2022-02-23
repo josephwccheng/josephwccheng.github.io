@@ -270,7 +270,7 @@ video {
 .gallery img {
     transition: all 0.3s;
 }
-.gallery img:hover {
+.project-highlights-img:hover {
     opacity: 0.7;
     transition: all 0.3s;
     cursor: pointer;
