@@ -24,4 +24,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
+  function myFunction(element, color) {
+      element.style.color = color;
+  }
+
 });

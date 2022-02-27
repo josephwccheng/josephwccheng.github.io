@@ -134,6 +134,17 @@ a {
     box-shadow: none;
 }
 
+/* Dropdown Menu (Hidden by Default) */  
+.dropdown-menu {
+    background-color: var(--headerbg);
+}
+
+.dropdown-item {
+    color: white;
+}
+.dropdown-menu li {
+    text-align: left !important;
+}
 
 /*---------- Hover Effects ----------*/
 nav ul {

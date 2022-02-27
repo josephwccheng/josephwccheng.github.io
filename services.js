@@ -24,3 +24,7 @@ $(document).ready(function () {
         $(this).parent().find('.services-list').slideToggle();
     });
 });
+
+function testing() {
+    alert('testing something');
+}
