@@ -25,6 +25,8 @@ $(document).ready(function () {
     });
 });
 
-function testing() {
-    alert('testing something');
-}
+// Expands the Services when a user selects the specific services from the menu bar
+function expandServices(service) {
+    const service_element = document.getElementById(service);
+    $(service_element).slideDown();
+  }
