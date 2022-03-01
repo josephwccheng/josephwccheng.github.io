@@ -29,4 +29,6 @@ $(document).ready(function () {
 function expandServices(service) {
     const service_element = document.getElementById(service);
     $(service_element).slideDown();
+    const dropdownMenu = document.querySelectorAll('.navbar-collapse');
+    console.log(dropdownMenu);
   }
