@@ -29,13 +29,12 @@ $(document).ready(function () {
 function expandServices(service) {
     var service_element = document.getElementById(service);
     //get y position of services' respective button with offset of height of banner
-    var service_element_btn = document.getElementById(service+"-btn");
-    var service_element_btn_position = $(service_element_btn).offset().top-200;
+    var service_element_btn = document.getElementById(service + "-btn");
     //scroll to position
     $('html, body').animate({
-        scrollTop: service_element_btn_position
+        scrollTop: $(service_element_btn).offset().top - 200
     });
     //display services dropdown div
     $(service_element).slideDown();
-    
+
 };

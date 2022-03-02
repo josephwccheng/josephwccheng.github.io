@@ -1,6 +1,6 @@
 // this function runs when the DOM is ready, i.e. when the document has been parsed
-document.addEventListener("DOMContentLoaded", function() {
-  
+document.addEventListener("DOMContentLoaded", function () {
+
   const menuToggle = document.getElementById('navbarSupportedContent');
   const bsCollapse = new bootstrap.Collapse(menuToggle, {
     toggle: false
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const navbar = document.querySelector('.navbar');
 
   const navLinks = document.querySelectorAll('.nav-link');
-  const navDropdownItems = document.querySelectorAll('.dropdown-item');
+  const navDropdownItems = document.querySelectorAll('.dropdown-link');
   if (navbar.offsetWidth < navbarExpandLgToggle) {
     // This function toggles the menu bar for phone devices to hide once a topic is selected.
     navLinks.forEach((l) => {
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
           bsCollapse.toggle()
         })
       };
-    // This function toggles the drop down items for phone devices to hide once a topic is selected.
+      // This function toggles the drop down items for phone devices to hide once a topic is selected.
     });
     if (navbar.offsetWidth < navbarExpandLgToggle) {
       navDropdownItems.forEach((l) => {
