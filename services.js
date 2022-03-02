@@ -24,3 +24,9 @@ $(document).ready(function () {
         $(this).parent().find('.services-list').slideToggle();
     });
 });
+
+// Expands the Services when a user selects the specific services from the menu bar
+function expandServices(service) {
+    const service_element = document.getElementById(service);
+    $(service_element).slideDown();
+};

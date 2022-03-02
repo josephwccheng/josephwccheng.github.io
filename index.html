@@ -20,7 +20,7 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark stroke">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="#">
             <img class="logo" src="images/logowhite.svg" alt="" width="150" height="60">
             <img class="logo-black" src="images/logoblack.svg" alt="" width="150" height="60">
           </a>
@@ -34,8 +34,18 @@
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="#">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#services">Services</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#services" role="button" id="dropdownServices" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownServices">
+                  <li><a class="dropdown-item" href="#commercial-fitouts" onclick="expandServices('commercial-fitouts')">Commercial Fitouts</a></li>
+                  <li><a class="dropdown-item" href="#wiring" onclick="expandServices('wiring')">Wiring</a></li>
+                  <li><a class="dropdown-item" href="#data-and-comms" onclick="expandServices('data-and-comms')">Data & Communications</a></li>
+                  <li><a class="dropdown-item" href="#industrial" onclick="expandServices('industrial')">Industrial</a></li>
+                  <li><a class="dropdown-item" href="#green-energy" onclick="expandServices('green-energy')">Green & Renewable Energy</a></li>
+                  <li><a class="dropdown-item" href="#project-consultations" onclick="expandServices('project-consultations')">Project Consultations</a></li>
+                </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#aboutUs">About Us</a>
@@ -150,7 +160,7 @@
             <img class="project-highlights-img w-100" src="images/wiring/IMG_7297.JPG">
             <h4>Wiring</h4>
           </div>
-          <div class="row project-highlights-mobile" id="wiring">
+          <div class="row project-highlights-mobile" id="wiring-projects">
             <p>Wiring design and installations of residential, commercial, and industrial fitouts. Power, lighting,
               data, TV, alarm systems,
               sound systems, and smoke detections.
@@ -223,7 +233,7 @@
               mollit
               anim id est laborum.</p>
           </div>
-          <div class="row project-highlights" id="wiring">
+          <div class="row project-highlights" id="wiring-projects">
             <p>Wiring design and installations of residential, commercial, and industrial fitouts. Power, lighting,
               data, TV, alarm systems,
               sound systems, and smoke detections.
