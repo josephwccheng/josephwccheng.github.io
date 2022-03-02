@@ -27,6 +27,15 @@ $(document).ready(function () {
 
 // Expands the Services when a user selects the specific services from the menu bar
 function expandServices(service) {
-    const service_element = document.getElementById(service);
+    var service_element = document.getElementById(service);
+    //get y position of services' respective button with offset of height of banner
+    var service_element_btn = document.getElementById(service+"-btn");
+    var service_element_btn_position = $(service_element_btn).offset().top-200;
+    //scroll to position
+    $('html, body').animate({
+        scrollTop: service_element_btn_position
+    });
+    //display services dropdown div
     $(service_element).slideDown();
+    
 };
