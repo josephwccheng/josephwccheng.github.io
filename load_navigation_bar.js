@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // navbar-expand-lg collapse on 992px
   const navbarExpandLgToggle = 992;
   const navbar = document.querySelector('.navbar');
-
   const navLinks = document.querySelectorAll('.nav-link');
   const navDropdownItems = document.querySelectorAll('.dropdown-link');
   if (navbar.offsetWidth < navbarExpandLgToggle) {
@@ -31,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  // Highlight navbar item of current page
+  // Highlight navbar menu item of current section when scrolling through page
   const divLink = document.querySelectorAll('.anchor');
   window.addEventListener('scroll', () => {
     let current = '';

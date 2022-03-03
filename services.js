@@ -1,23 +1,29 @@
 $(document).ready(function () {
     // Show Project highlights text
     var number;
-    $('.project-highlights-img').click(function () {
-        number = $('.project-highlights-img').index(this);
-        // if on mobile show project highlights below each picture
-        if ($(window).width() < 576) {
-            $('.project-highlights').hide();
-            if ($('.project-highlights-mobile').eq(number).css("display") == 'none') {
-                $('.project-highlights-mobile').hide();
-            }
-            $('.project-highlights-mobile').eq(number).slideToggle();
-        } else {
-            $('.project-highlights-mobile').hide();
+    if ($(window).width() > 576) {
+
+        $('.project-highlights-img').click(function () {
+            number = $('.project-highlights-img').index(this);
             if ($('.project-highlights').eq(number).css("display") == 'none') {
                 $('.project-highlights').hide();
             }
             $('.project-highlights').eq(number).slideToggle();
-        }
-    });
+        });
+    } else {
+        $('.project-highlights').eq(0).slideToggle();
+        var carousel = $('.carousel');
+        var carouselItems = carousel.find('.carousel-item');
+        carousel.carousel({
+            interval: 2000
+        }).on('slid.bs.carousel', function (event) {
+            number = carouselItems.siblings('.active').index();
+            if ($('.project-highlights').eq(number).css("display") == 'none') {
+                $('.project-highlights').hide();
+            }
+            $('.project-highlights').eq(number).show();
+        })
+    }
 
     // Show services text
     $('.services-btn').click(function () {

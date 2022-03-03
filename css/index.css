@@ -152,7 +152,7 @@ a {
     .dropdown-menu {
         margin-top: 40px !important;
         float: right;
-        margin-right:-100px;
+        margin-right: -100px;
     }
 
     .dropdown-menu li,
@@ -330,9 +330,32 @@ video {
     cursor: pointer;
 }
 
-.project-highlights,
-.project-highlights-mobile {
+.project-highlights {
     display: none;
+}
+
+.carousel-indicators {
+    z-index:1;
+}
+
+.carousel-caption h4 span {
+    background-color: rgba(0, 0, 0, 0.363);
+    padding: 0 3px 0 5px;
+}
+
+@media screen and (min-width:576px) {
+    .carousel-mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .gallery-desktop {
+        display: none;
+    }
+    .project-highlights {
+        height: 350px;
+    }
 }
 
 /*------------------ Services and About Us images and captions ------------------*/
