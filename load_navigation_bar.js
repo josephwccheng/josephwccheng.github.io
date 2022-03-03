@@ -30,16 +30,25 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   };
-  // (TODO) - This function doesn't seem to work on my end
+
   // Highlight navbar item of current page
-  // $(function () {
-  //   $('a').each(function () {
-  //     if ((window.location.pathname.indexOf($(this).attr('href'))) > -1) {
-  //       $(this).toggleClass("hovered");
-  //     }
-  //   });
-  // });
-
-
-
+  const divLink = document.querySelectorAll('.anchor');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    divLink.forEach(div => {
+      const divLinkTop = div.offsetTop;
+      const divLinkHeight = div.clientHeight;
+      if (scrollY > divLinkTop - divLinkHeight / 4) {
+        current = div.getAttribute('id');
+      }
+    })
+    navLinks.forEach(a => {
+      a.classList.remove('hovered');
+      if (current == null) {
+        document.getElementById('home-nav-link').classList.add('hovered')
+      } else {
+        document.querySelector("a[href*=" + current + "]").classList.add('hovered')
+      }
+    })
+  })
 });
