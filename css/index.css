@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Staatliches&display=swap');
+
+:root {
+    --headerbg: #929292;
+    --headertext: #ffffffe7;
+    --headertexthover: rgba(0, 0, 0, 0.8);
+    --footer: #dbdbdb;
+}
+
+#navbar {
+    background-image: url("../assets/images/sea_art.jpeg")
+}
+/*------------------ Footer ------------------*/
+.footer {
+    background-color: var(--footer);
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    margin-bottom: -5px;
+}
