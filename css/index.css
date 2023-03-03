@@ -101,7 +101,7 @@ section {
     scroll-margin-top: 4rem;
 }
 
-@media screen and (max-width:576px) {
+@media screen and (max-width:991px) {
     section {
         scroll-margin-top: 15rem;
     }
