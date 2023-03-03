@@ -7,11 +7,55 @@
     --footer: #dbdbdb;
 }
 
-#navbar {
-    background-image: url("../assets/images/sea_art.jpeg")
+body {
+    margin:auto auto;
 }
-/*------------------ Footer ------------------*/
-#footer {
+
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    overflow: hidden;
+    text-transform: uppercase;
+    --bs-bg-opacity: 1;
+    padding: 0 !important;
+}
+/*-------------------- Header ---------------------*/
+.navbar {
+    background-image: url("../assets/images/sea_art.jpeg");
+}
+
+.navbar-brand {
+    font-family: 'Staatliches', 'Arial', sans-serif;
+    letter-spacing: 2px;
+    padding: 0;
+}
+
+.navbar-toggler {
+    border: none;
+    margin-right: 15px;
+}
+
+.navbar-brand:hover .logo-black {
+    display: inline;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    text-align: right;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+
+/*-------------------- Footer ---------------------*/
+.footer {
+    position: sticky;
+    bottom: 0;
+    left: 0;
     background-image: url("../assets/images/sea_art.jpeg");   
 }
 
@@ -20,8 +64,9 @@
 }
 
 .fa {
-    padding: 20px;
-    font-size: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
     color: var(--footer);
     text-align: center;
     text-decoration: none;
@@ -32,19 +77,38 @@
     opacity: 0.7;
 }
 
+/* ********* carousel ********* */
 .carousel-item {
     text-align: center;
 }
 
 .carousel-image {
-    max-height:400px;
-    width: 100%;
+    max-height:500px;
+    max-width:100%;
     /* width: 60%; */
-    /* height: 50%; */
+    height: auto;
     /* max-height: 50px; */
     object-fit: cover;
 }
 
+.carousel-control-prev, .carousel-control-next {
+    filter: invert(100%);
+}
+
+/****** CONTENT PAGE *****/
+/**** (TODO) Smaller the screen width, the less impact it has***/
+section {
+    scroll-margin-top: 4rem;
+}
+
+@media screen and (max-width:576px) {
+    section {
+        scroll-margin-top: 15rem;
+    }
+}
+
+
+
 .about-me {
-    max-height:400px; 
+    max-height: 400px;
 }
