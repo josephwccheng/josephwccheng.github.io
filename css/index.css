@@ -11,10 +11,40 @@
     background-image: url("../assets/images/sea_art.jpeg")
 }
 /*------------------ Footer ------------------*/
-.footer {
-    background-color: var(--footer);
-    position: fixed;
-    bottom: 0px;
+#footer {
+    background-image: url("../assets/images/sea_art.jpeg");   
+}
+
+#footer-text {
+    color: var(--footer);
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    color: var(--footer);
+    text-align: center;
+    text-decoration: none;
+  }
+  
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+.carousel-image {
+    max-height:400px;
     width: 100%;
-    margin-bottom: -5px;
+    /* width: 60%; */
+    /* height: 50%; */
+    /* max-height: 50px; */
+    object-fit: cover;
+}
+
+.about-me {
+    max-height:400px; 
 }
